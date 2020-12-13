@@ -1,13 +1,12 @@
 # WorkshopQCBio_trial
 Repository created for the QCBio trial workshps
 
-# Workshop: part of NGS workshop: read mapping
+# Part of NGS workshop: read mapping
 
 # Outline
 Expected outcomes
 1. Today you will learn how to align your sequencing reads to a genome reference
 2. Learn how to use the Integrative genomics viewer (IGV)
-
 
 Mapping and SNP calling exercise
 --------------------------------
@@ -18,7 +17,7 @@ other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
 (reads) need to be mounted according to a picture (reference genome). 
 
-
+![Mapping illustration](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/mapping.png)
 
 Data
 --------------------------------
@@ -46,7 +45,7 @@ head metadata_simons_project.txt
     ## 5   male LP6005441-DNA_E07
     ## 6 female LP6005441-DNA_F07
 
-![](WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
+![](https://github.com/izabelcavassim/WorkshopQCBio_trial/tree/main/Images/unnamed-chunk-1-1.png)
 
 This dataset is a subset of the Simons Diversity Project, and as you can
 see, it covers a bit of the diversity of human population. If you want
@@ -62,7 +61,7 @@ Log in to the server via terminal
 
 ### For mac users
 
-    ssh -p 8922 [user]@185.45.23.197
+    ssh mica20@hoffman2.idre.ucla.edu
 
 Data source
 -----------
