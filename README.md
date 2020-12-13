@@ -6,7 +6,7 @@ Repository created for the QCBio trial workshps
 # Outline
 Expected outcomes
 1. Today you will learn how to align your sequencing reads to a genome reference
-2. 
+2. Learn how to use the Integrative genomics viewer (IGV)
 
 
 Mapping and SNP calling exercise
