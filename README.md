@@ -5,18 +5,24 @@ Repository created for the QCBio trial workshps
 
 # Outline
 Expected outcomes
-1. Today you will learn how to align your reads to a genome
+1. Today you will learn how to align your sequencing reads to a genome reference
+2. Learn how to use the Integrative genomics viewer (IGV)
 
 
 Mapping and SNP calling exercise
 --------------------------------
 
-As we learned last week, high-throughput sequencing technologies have in
-the past few years been producing millions of reads of human genome and
+As we learned during the theorical lecture, high-throughput sequencing technologies have in
+the past few years been producing millions of DNA and RNA sequences reads of human genome and
 other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
-(reads) need to be mounted according to a picture (reference genome). In
-this exercise section you will be exposed to different softwares used
+(reads) need to be mounted according to a picture (reference genome). 
+
+
+
+Data
+--------------------------------
+In this exercise section you will be exposed to different softwares used
 for mapping and snp calling. We will use a dataset composed of 30
 individuals from 3 different regions: Africa, EastAsia and WestEurasia.
 
@@ -40,7 +46,7 @@ head metadata_simons_project.txt
     ## 5   male LP6005441-DNA_E07
     ## 6 female LP6005441-DNA_F07
 
-![](Mapping_tutorial_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+![](WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
 
 This dataset is a subset of the Simons Diversity Project, and as you can
 see, it covers a bit of the diversity of human population. If you want
@@ -88,7 +94,9 @@ Two input files are needed to do genome mapping:
 
 -   Fasta file containing your reference genome
     ([GRCh37](http://grch37.ensembl.org/index.html))
--   The reads in fastq format
+-   The reads in fastq format.
+
+As you learned during the theoretical lecture, fastaq format is a text format that stores both the biological sequence and its related quality score. 
 
 First we need to index the reference file for later use. This step is
 important for the speed and process of the mapping algorithm. It takes
