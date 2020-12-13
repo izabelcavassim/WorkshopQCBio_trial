@@ -1,12 +1,13 @@
 # WorkshopQCBio_trial
 Repository created for the QCBio trial workshps
 
-# Part of NGS workshop: read mapping
+# Workshop: part of NGS workshop: read mapping
 
 # Outline
 Expected outcomes
 1. Today you will learn how to align your sequencing reads to a genome reference
 2. Learn how to use the Integrative genomics viewer (IGV)
+
 
 Mapping and SNP calling exercise
 --------------------------------
@@ -17,12 +18,12 @@ other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
 (reads) need to be mounted according to a picture (reference genome). 
 
-![Mapping illustration](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/mapping.png)
+[Mapping illustration](https://github.com/izabelcavassim/PG_2018/blob/master/Exercises/Week02/
 
 Data
 --------------------------------
 In this exercise section you will be exposed to different softwares used
-for mapping and snp calling. We will use a dataset composed of 30
+for mapping. We will use a dataset composed of 30
 individuals from 3 different regions: Africa, EastAsia and WestEurasia.
 
 ```{bash}
@@ -45,38 +46,33 @@ head metadata_simons_project.txt
     ## 5   male LP6005441-DNA_E07
     ## 6 female LP6005441-DNA_F07
 
-![](https://github.com/izabelcavassim/WorkshopQCBio_trial/tree/main/Images/unnamed-chunk-1-1.png)
+![](WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
 
 This dataset is a subset of the Simons Diversity Project, and as you can
-see, it covers a bit of the diversity of human population. If you want
-to go further in details about this project and results, you can click
+see, it covers a "bit" of the diversity of human population. If you want
+to go further in details about this project and their findings, you can read of the publications 
 [here](https://www.nature.com/articles/nature18964).
 
 Log in to the server via terminal
 ---------------------------------
 
 ### For windows users
-
-    plink -P 8922 [user]@185.45.23.197
-
+```{bash}
+plink -P 8922 [user]@185.45.23.197
+```
 ### For mac users
-
-    ssh mica20@hoffman2.idre.ucla.edu
-
+```{bash}
+ssh [USERNAME]@hoffman2.idre.ucla.edu
+```
 Data source
 -----------
 
-You will be separated in pairs so you can help each other out with the
-commands. Each of you will be responsible for 2 individuals and at the
-end of this exercise we will estimate the SNP heterozygosity per
-individual. The data is placed in a folder called **Data** in the same
-directory as users folder. The individuals for each person is written in
-the spreadsheet
-[here](https://docs.google.com/spreadsheets/d/1OEHI1tNiwHrwKkl9L5rPtbVKCHQDpCZtKzpnZ1sWKJY/edit?usp=sharing).
+The data is placed in a folder called **Data** in the same
+directory as users folder. 
 In the following tutorial I am using one individual as an example
-**ERR1019076**, please replace it by the individual you've got.
+**ERR1019076**, but we could do the same analyses with every individual.
 
-Mapping reads against the reference
+Mapping reads against a reference genome
 -----------------------------------
 
 We will be using the bwa mapper. If you are interested in understanding
@@ -131,7 +127,7 @@ Get some useful stats of your mapping:
     samtools flagstat ERR1019076.bam
 
 Once the map is generated, you can index the bam file to visualize it
-using igv. Indexing a genome sorted BAM file allows one to quickly
+using the software IGV. Indexing a genome sorted BAM file allows one to quickly
 extract alignments overlapping particular genomic regions. Moreover,
 indexing is required by genome viewers such as IGV so that the viewers
 can quickly display alignments in each genomic region to which you
@@ -234,60 +230,3 @@ terminal, you just need to type R.
 
 What are the conclusions you can extract from these analysis? Does the
 coverage match with what you observed with IGV?
-
-SNP calling
------------
-
-Even though just a tiny portion (around 2%) of our genomes are based of
-protein coding regions, this partition contains most of the disease
-causal variants (mutations), and that is why variant calling is so
-important in a medical point of view. In the population genetics side of
-view it is also possible to use these variants to establish differences
-between individuals, populations and species. It can also be used to
-clarify the genetic basis of adaptation. These topics will come back to
-your mind during the following weeks.
-
-Once we have mapped our reads we can now start with variant detection.
-For now we will be using the software **Platypus**: a tool designed for
-efficient and accurate variant-detection in high-throughput sequencing
-data. You can access their website
-[here](http://www.well.ox.ac.uk/platypus).
-
-Creating a conda environment:
-
-    conda create --name Mapping_environment
-
-Activating an environment:
-
-    conda activate Mapping_environment
-
-Installing platypus:
-
-    conda install -c bioconda platypus-variant
-
-    platypus callVariants --bamFiles=ERR1019076.bam --refFile= /home/Data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa --output=AllVariants.vcf
-
-The output will be a single
-[VCF](http://samtools.github.io/hts-specs/VCFv4.2.pdf) file containing
-all the variants that Platypus identified, and a 'log.txt' file,
-containing log information.
-
-Look at the output vcf file. What does the format look like? Does that
-match with what you observed in the IGV? Download the VCF file to the
-IGV brownser.
-
-    less AllVariants.vcf
-
-You will be using this format further in the course, for now let's just
-count the number of heterozygous snps in each individual:
-
-    grep -o '0/1' AllVariants.vcf  | wc -l
-
--   0/0 - the sample is homozygous reference
--   0/1 - the sample is heterozygous, carrying 1 copy of each of the REF
-    and ALT alleles
--   1/1 - the sample is homozygous alternate
-
-Let's fill up a table in the google docs with the heterozygous
-estimations for each individual of our data. The link is
-[here](https://docs.google.com/spreadsheets/d/1OEHI1tNiwHrwKkl9L5rPtbVKCHQDpCZtKzpnZ1sWKJY/edit?usp=sharing):
