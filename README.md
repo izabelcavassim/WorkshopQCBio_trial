@@ -5,7 +5,8 @@ Repository created for the QCBio trial workshps
 
 # Outline
 Expected outcomes
-1. Today you will learn how to align your reads to a genome
+1. Today you will learn how to align your sequencing reads to a genome reference
+2. 
 
 
 Mapping and SNP calling exercise
@@ -93,7 +94,9 @@ Two input files are needed to do genome mapping:
 
 -   Fasta file containing your reference genome
     ([GRCh37](http://grch37.ensembl.org/index.html))
--   The reads in fastq format
+-   The reads in fastq format.
+
+As you learned during the theoretical lecture, fastaq format is a text format that stores both the biological sequence and its related quality score. 
 
 First we need to index the reference file for later use. This step is
 important for the speed and process of the mapping algorithm. It takes
