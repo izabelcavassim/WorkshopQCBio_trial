@@ -20,6 +20,11 @@ this exercise section you will be exposed to different softwares used
 for mapping and snp calling. We will use a dataset composed of 30
 individuals from 3 different regions: Africa, EastAsia and WestEurasia.
 
+```{bash}
+ls
+head metadata_simons_project.txt
+```
+
     ##       X...ID    ENA.RUN    population region country latitude longitude
     ## 1 ERS1042176 ERR1019075 Ju_hoan_North Africa Namibia    -18.9      21.5
     ## 2 ERS1042177 ERR1019076 Ju_hoan_North Africa Namibia    -18.9      21.5
