@@ -18,7 +18,7 @@ other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
 (reads) need to be mounted according to a picture (reference genome). 
 
-[Mapping illustration](https://github.com/izabelcavassim/PG_2018/blob/master/Exercises/Week02/)
+![Mapping illustration](https://github.com/izabelcavassim/PG_2018/blob/master/Exercises/Week02/)
 
 Data
 --------------------------------
