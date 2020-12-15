@@ -2,7 +2,7 @@
 Repository created for the QCBio trial workshps
 
 # Workshop: part of NGS workshop: read mapping
-
+![Applications](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/applications.png)
 # Outline
 Expected outcomes
 1. Today you will learn how to align your sequencing reads to a genome reference
