@@ -44,7 +44,7 @@ head metadata_simons_project.txt
     ## 5   male LP6005441-DNA_E07
     ## 6 female LP6005441-DNA_F07
 
-![](WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
+![](https://github.com/izabelcavassim/WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
 
 This dataset is a subset of the Simons Diversity Project, and as you can
 see, it covers a "bit" of the diversity of human population. If you want
