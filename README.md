@@ -27,7 +27,7 @@ for mapping. We will use a dataset composed of 30
 individuals from 3 different regions: Africa, EastAsia and WestEurasia.
 
 ```{bash}
-head metadata_simons_project.txt
+head Sample_meta_data.txt
 ```
 
     ##       X...ID    ENA.RUN    population region country latitude longitude
