@@ -2,14 +2,13 @@
 Repository created for the QCBio trial workshps
 
 # Workshop: part of NGS workshop: read mapping
-![Applications](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/applications.png)
 # Outline
 Expected outcomes
 1. Today you will learn how to align your sequencing reads to a genome reference
 2. Learn how to use the Integrative genomics viewer (IGV)
 
 
-Mapping and SNP calling exercise
+Read Mapping exercise
 --------------------------------
 
 As we learned during the theorical lecture, high-throughput sequencing technologies have in
@@ -18,7 +17,7 @@ other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
 (reads) need to be mounted according to a picture (reference genome). 
 
-![Mapping illustration](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/mapping.png)
+![Applications](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/applications.png)
 
 Data
 --------------------------------
@@ -100,7 +99,7 @@ to perform the alignment.
 
 Create a soft-link of fasta reference to your home folder (type pwd, to know where you are):
 
-    ln -s /home/Data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa /home/user_name/
+    ln -s /u/home/m/mica20/QCBioWorkshoptrial/data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa /home/user_name/
 
 Then produce the indexes needed for bwa mapper:
 
