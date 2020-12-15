@@ -2,6 +2,13 @@
 Repository created for the QCBio trial workshps
 
 # Workshop: part of NGS workshop: read mapping
+
+As we learned during the theorical lecture, high-throughput sequencing technologies have in
+the past few years been producing millions of DNA and RNA sequences reads of human genome and
+other species. To be useful, this genetic information has to be 'put
+together' in a smart way, in the same way as the pieces of a puzzle
+(reads) need to be mounted according to a picture (reference genome). 
+
 ![Applications](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/applications.png)
 # Outline
 Expected outcomes
@@ -11,15 +18,6 @@ Expected outcomes
 
 Mapping and SNP calling exercise
 --------------------------------
-
-As we learned during the theorical lecture, high-throughput sequencing technologies have in
-the past few years been producing millions of DNA and RNA sequences reads of human genome and
-other species. To be useful, this genetic information has to be 'put
-together' in a smart way, in the same way as the pieces of a puzzle
-(reads) need to be mounted according to a picture (reference genome). 
-
-![Mapping illustration](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/mapping.png)
-
 Data
 --------------------------------
 In this exercise section you will be exposed to different softwares used
