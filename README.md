@@ -68,7 +68,7 @@ Data source
 The data is placed in a folder called **Data** in the same
 directory as users folder. 
 In the following tutorial I am using one individual as an example
-**ERR1019076**, but we could do the same analyses with every individual.
+**ERR1019076**, but we could do the same analyses with every Simon's diversity individual.
 
 Mapping reads against a reference genome
 -----------------------------------
