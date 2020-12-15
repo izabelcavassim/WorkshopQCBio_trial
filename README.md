@@ -98,7 +98,7 @@ important for the speed and process of the mapping algorithm. It takes
 around 4 minutes. This creates a collecion of files that are used by BWA
 to perform the alignment.
 
-Create a soft-link of fasta reference to your folder:
+Create a soft-link of fasta reference to your home folder (type pwd, to know where you are):
 
     ln -s /home/Data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa /home/user_name/
 
