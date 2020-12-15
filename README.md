@@ -2,13 +2,6 @@
 Repository created for the QCBio trial workshps
 
 # Workshop: part of NGS workshop: read mapping
-
-As we learned during the theorical lecture, high-throughput sequencing technologies have in
-the past few years been producing millions of DNA and RNA sequences reads of human genome and
-other species. To be useful, this genetic information has to be 'put
-together' in a smart way, in the same way as the pieces of a puzzle
-(reads) need to be mounted according to a picture (reference genome). 
-
 ![Applications](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/applications.png)
 # Outline
 Expected outcomes
@@ -18,6 +11,15 @@ Expected outcomes
 
 Mapping and SNP calling exercise
 --------------------------------
+
+As we learned during the theorical lecture, high-throughput sequencing technologies have in
+the past few years been producing millions of DNA and RNA sequences reads of human genome and
+other species. To be useful, this genetic information has to be 'put
+together' in a smart way, in the same way as the pieces of a puzzle
+(reads) need to be mounted according to a picture (reference genome). 
+
+![Mapping illustration](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/mapping.png)
+
 Data
 --------------------------------
 In this exercise section you will be exposed to different softwares used
@@ -25,7 +27,6 @@ for mapping. We will use a dataset composed of 30
 individuals from 3 different regions: Africa, EastAsia and WestEurasia.
 
 ```{bash}
-ls
 head metadata_simons_project.txt
 ```
 
@@ -44,7 +45,7 @@ head metadata_simons_project.txt
     ## 5   male LP6005441-DNA_E07
     ## 6 female LP6005441-DNA_F07
 
-![](https://github.com/izabelcavassim/WorkshopQCBio_trial/Images/unnamed-chunk-1-1.png)
+![simons_diversity](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/unnamed-chunk-1-1.png)
 
 This dataset is a subset of the Simons Diversity Project, and as you can
 see, it covers a "bit" of the diversity of human population. If you want
@@ -89,7 +90,8 @@ Two input files are needed to do genome mapping:
     ([GRCh37](http://grch37.ensembl.org/index.html))
 -   The reads in fastq format.
 
-As you learned during the theoretical lecture, fastaq format is a text format that stores both the biological sequence and its related quality score. 
+As you learned during the theoretical lecture, fastaq format is a text format that stores 
+both the biological sequence and its related quality score. 
 
 First we need to index the reference file for later use. This step is
 important for the speed and process of the mapping algorithm. It takes
