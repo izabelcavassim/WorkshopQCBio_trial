@@ -127,15 +127,14 @@ later in this tutorial (IGV) while you wait for it.
 While it is running, let's remember out what the sam format looks like:
 
 ![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
+Detailed decsription of alignment information is found ![here](https://www.samformat.info/sam-format-flag)
 
-![SAM scores](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/scores_sam.png){width=20%}
 
+Now, lets have a look at the bam file generated:
 
-Have a look at the bam file generated:
+    less mapped_ERR1019076_reads_135_145.sam
 
-    samtools view mapped_ERR1019076.sam | head
-
-Get some useful stats of your mapping:
+We can get some useful stats of your mapping by using samtools:
 
     samtools flagstat mapped_ERR1019076.sam
 
