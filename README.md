@@ -124,11 +124,11 @@ later in this tutorial (IGV) while you wait for it.
 
     bwa mem -t 16 -p Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz ERR1019076_reads_135_145.fq > mapped_ERR1019076_reads_135_145.sam
 
-While it is running, let's remember out how the sam format looks like:
+While it is running, let's remember out what the sam format looks like:
 
 ![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
 
-
+![SAM scores](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/scores_sam)
 
 
 Have a look at the bam file generated:
