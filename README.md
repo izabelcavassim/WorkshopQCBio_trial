@@ -128,7 +128,7 @@ While it is running, let's remember out what the sam format looks like:
 
 ![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
 
-![SAM scores](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/scores_sam)
+![SAM scores](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/scores_sam.png)
 
 
 Have a look at the bam file generated:
