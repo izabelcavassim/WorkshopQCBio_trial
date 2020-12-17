@@ -145,7 +145,7 @@ indexing is required by genome viewers such as IGV so that the viewers
 can quickly display alignments in each genomic region to which you
 navigate.
 
-    samtools view -S -b mapped_ERR1019076_reads_135_145.sam > mapped_ERR1019076_reads_135_145.bamted.bam
+    samtools view -S -b mapped_ERR1019076_reads_135_145.sam > mapped_ERR1019076_reads_135_145.bam
     samtools sort mapped_ERR1019076_reads_135_145.bam -o mapped_ERR1019076_reads_135_145_sorted.bam
     samtools index mapped_ERR1019076_reads_135_145_sorted.bam
 
