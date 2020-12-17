@@ -122,7 +122,14 @@ Now you can map the reads back to the reference. This will take around
 10 minutes. You can start installing the software that will be used
 later in this tutorial (IGV) while you wait for it.
 
-    bwa mem -t 16 -p Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz ERR1019076_reads_135_145.fq > mapped_ERR1019076.sam
+    bwa mem -t 16 -p Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz ERR1019076_reads_135_145.fq > mapped_ERR1019076_reads_135_145.sam
+
+While it is running, let's remember out how the sam format looks like:
+
+![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
+
+
+
 
 Have a look at the bam file generated:
 
