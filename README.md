@@ -1,5 +1,5 @@
 # Background
-![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background.png)
+![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background_2.png)
 
 
 
