@@ -153,7 +153,8 @@ Dowloading via terminal
 
 You can download the data via terminal by the following:
 
-    scp mica20@hoffman2.idre.ucla.edu:/home/Data/ERR1019076.bam . 
+    scp mica20@hoffman2.idre.ucla.edu:/u/home/m/mica20/QCBioWorkshoptrial/data/mapped_ERR1019076_reads_135_145_sorted.bam . 
+    scp mica20@hoffman2.idre.ucla.edu:/u/home/m/mica20/QCBioWorkshoptrial/data/mapped_ERR1019076_reads_135_145_sorted.bai . 
 
 This will download the file to your current terminal. You will be required to provide your password. 
 
