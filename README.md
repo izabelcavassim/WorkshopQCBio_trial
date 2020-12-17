@@ -1,7 +1,12 @@
 # Background
-![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background.png)
+![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background_2.png)
 
+# Research
+Looking at the selective forces shaping noncoding DNA
 
+# Hobbie
+I like running :D (even when it is cold!)
+![Hobbie](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/Run.png)
 
 
 
