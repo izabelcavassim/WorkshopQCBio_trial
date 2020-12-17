@@ -136,7 +136,7 @@ Now, lets have a look at the bam file generated:
 
 We can get some useful stats of your mapping by using samtools:
 
-    samtools flagstat mapped_ERR1019076.sam
+    samtools flagstat mapped_ERR1019076_reads_135_145.sam
 
 Once the map is generated, you can index the bam file to visualize it
 using the software IGV. Indexing a genome sorted BAM file allows one to quickly
@@ -145,7 +145,7 @@ indexing is required by genome viewers such as IGV so that the viewers
 can quickly display alignments in each genomic region to which you
 navigate.
 
-    samtools index ERR1019076.bam
+    samtools index Emapped_ERR1019076.sam
 
 Dowloading via terminal
 -----------------------
