@@ -51,7 +51,7 @@ to go further in details about this project and their findings, you can read of 
 
 Software
 --------------------------------
-We will be using the software !BWA(https://academic.oup.com/bioinformatics/article/25/14/1754/225615), 
+We will be using the software BWA(https://academic.oup.com/bioinformatics/article/25/14/1754/225615), 
 BWA is standard software package for mapping low-divergent sequences (illumina reads) against a large reference genome––such as the human genome.
 It contains different algorithms BWA, desgined for short reads (<= 100bp) and  BWA-SW and BWA-MEM for longer reads. Because we have high-quality queries (Simons diversity project) we will use BWA-MEM algorithm. This algorithm turns out to be the latest and fastest.
 
@@ -93,7 +93,7 @@ Two input files are needed to do genome mapping:
 -   The reads in fastq format.
 
 As you learned during the theoretical lecture, fastaq format is a text format that stores 
-both the biological sequence and its related quality score. To refresh your memory the explanation for the format is found ![here](https://en.wikipedia.org/wiki/FASTQ_format)
+both the biological sequence and its related quality score. To refresh your memory the explanation for the format is found [here](https://en.wikipedia.org/wiki/FASTQ_format)
 
 We first need to index the reference file for later use. This step is
 important for the speed and process of the mapping algorithm. It takes
@@ -106,12 +106,17 @@ Create a soft-link of fasta reference to your home folder (type pwd, to know whe
 
 Then produce the indexes needed for bwa mapper:
 
-    bwa index -p Homo_sapiens.GRCh37.75.dna.chromosome.2 -a bwtsw Homo_sapiens.GRCh37.75.dna.chromosome.2.fa
-
-You also need to generate a fasta file index. This can be done using
-**samtools**:
-
-    samtools faidx Homo_sapiens.GRCh37.75.dna.chromosome.2.fa
+    bwa index -a bwtsw Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz
+    
+It takes some seconds, so we can start discussing about the next steps. 
+Once we have the index file fro the reference sequence created then we can align our reads to that index
+ 
+Multilple options our found including:
+* -t INT        number of threads [1]
+* -k INT        minimum seed length [19]
+* -w INT        band width for banded alignment [100]
+* -p            Assume the first input query file is interleaved paired-end FASTA/Q
+* -a            output all alignments for SE or unpaired PE
 
 Now you can map the reads back to the reference. This will take around
 10 minutes. You can start installing the software that will be used
