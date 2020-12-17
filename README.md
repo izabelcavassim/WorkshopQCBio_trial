@@ -127,7 +127,7 @@ later in this tutorial (IGV) while you wait for it.
 While it is running, let's remember out what the sam format looks like:
 
 ![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
-Detailed decsription of alignment information is found ![here](https://www.samformat.info/sam-format-flag)
+Detailed decsription of alignment information is found [here](https://www.samformat.info/sam-format-flag)
 
 
 Now, lets have a look at the bam file generated:
