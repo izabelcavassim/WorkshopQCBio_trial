@@ -3,7 +3,12 @@
 
 # Research
 Looking at the selective forces shaping noncoding DNA. 
-This is a collaborative project that will bring together expertise from both **Lohmueller** and **Ernst’s lab** (UCLA in the Department of Biological Chemistry). Members of Jason Ernst’s lab have developed a machine learning approach to aggregate multiple sources of functional non-coding genomic data (over 1000 datasets) into genomic annotations. I will use these non-coding functional genomic annotations to compute the distribution of fitness effects (DFEs) for mutations in these regions while accounting for demography and linked selection. 
+
+This is a collaborative project that will bring together expertise from both **Lohmueller** and **Ernst’s lab** (UCLA in the Department of Biological Chemistry). 
+
+Members of Jason Ernst’s lab have developed a machine learning approach to aggregate multiple sources of functional non-coding genomic data (over 1000 datasets) into genomic annotations. 
+
+I will use these non-coding functional genomic annotations to compute the distribution of fitness effects (DFEs) for mutations in these regions while accounting for demography and linked selection. 
 
 # Hobbie
 I like running :D (even when it is cold!)
