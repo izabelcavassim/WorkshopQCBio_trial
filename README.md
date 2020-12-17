@@ -1,3 +1,10 @@
+# Background
+![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background.png)
+
+
+
+
+
 # WorkshopQCBio_trial
 Repository created for the QCBio trial workshps
 
@@ -95,11 +102,6 @@ Two input files are needed to do genome mapping:
 As you learned during the theoretical lecture, fastaq format is a text format that stores 
 both the biological sequence and its related quality score. To refresh your memory the explanation for the format is found [here](https://en.wikipedia.org/wiki/FASTQ_format)
 
-We first need to index the reference file for later use. This step is
-important for the speed and process of the mapping algorithm. It takes
-around 4 minutes. This creates a collecion of files that are used by BWA
-to perform the alignment.
-
 Create a soft-link of fasta reference to your home folder (type pwd, to know where you are):
 
     ln -s /u/home/m/mica20/QCBioWorkshoptrial/data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa /home/user_name/
@@ -108,7 +110,11 @@ Then produce the indexes needed for bwa mapper:
 
     bwa index -a bwtsw Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz
     
-It takes some seconds, so we can start discussing about the next steps. 
+We first need to index the reference file for later use. This step is
+important for the speed and process of the mapping algorithm. It takes
+around 4 minutes. This creates a collecion of files that are used by BWA
+to perform the alignment.
+
 Once we have the index file of the reference sequence created then we can align our reads to our reference.
  
 Multilple options our found including:
@@ -127,17 +133,16 @@ later in this tutorial (IGV) while you wait for it.
 While it is running, let's remember out what the sam format looks like:
 
 ![SAM format](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg)
+Detailed decsription of alignment information is found [here](https://www.samformat.info/sam-format-flag)
 
-![SAM scores](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/scores_sam)
 
+Now, lets have a look at the bam file generated:
 
-Have a look at the bam file generated:
+    less mapped_ERR1019076_reads_135_145.sam
 
-    samtools view mapped_ERR1019076.sam | head
+We can get some useful stats of your mapping by using samtools:
 
-Get some useful stats of your mapping:
-
-    samtools flagstat mapped_ERR1019076.sam
+    samtools flagstat mapped_ERR1019076_reads_135_145.sam
 
 Once the map is generated, you can index the bam file to visualize it
 using the software IGV. Indexing a genome sorted BAM file allows one to quickly
@@ -146,14 +151,19 @@ indexing is required by genome viewers such as IGV so that the viewers
 can quickly display alignments in each genomic region to which you
 navigate.
 
-    samtools index ERR1019076.bam
+    samtools view -S -b mapped_ERR1019076_reads_135_145.sam > mapped_ERR1019076_reads_135_145.bam
+    samtools sort mapped_ERR1019076_reads_135_145.bam -o mapped_ERR1019076_reads_135_145_sorted.bam
+    samtools index mapped_ERR1019076_reads_135_145_sorted.bam
 
 Dowloading via terminal
 -----------------------
 
 You can download the data via terminal by the following:
 
-    scp -P 8922 root@185.45.23.197:/home/Data/ERR1019076.bam Directory/My_computer
+    scp mica20@hoffman2.idre.ucla.edu:/u/home/m/mica20/QCBioWorkshoptrial/data/mapped_ERR1019076_reads_135_145_sorted.bam . 
+    scp mica20@hoffman2.idre.ucla.edu:/u/home/m/mica20/QCBioWorkshoptrial/data/mapped_ERR1019076_reads_135_145_sorted.bai . 
+
+This will download the file to your current terminal. You will be required to provide your password. 
 
 IGV software
 ------------
