@@ -154,7 +154,9 @@ Dowloading via terminal
 
 You can download the data via terminal by the following:
 
-    scp -P 8922 root@185.45.23.197:/home/Data/ERR1019076.bam Directory/My_computer
+    scp mica20@hoffman2.idre.ucla.edu:/home/Data/ERR1019076.bam . 
+
+This will download the file to your current terminal. You will be required to provide your password. 
 
 IGV software
 ------------
