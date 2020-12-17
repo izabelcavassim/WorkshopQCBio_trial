@@ -109,7 +109,7 @@ Then produce the indexes needed for bwa mapper:
     bwa index -a bwtsw Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz
     
 It takes some seconds, so we can start discussing about the next steps. 
-Once we have the index file fro the reference sequence created then we can align our reads to that index
+Once we have the index file of the reference sequence created then we can align our reads to our reference.
  
 Multilple options our found including:
 * -t INT        number of threads [1]
