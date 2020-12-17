@@ -2,7 +2,7 @@
 ![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background_2.png)
 
 # Research
-Looking at the selective forces shaping noncoding DNA. 
+Looking at the selective forces shaping human noncoding DNA. 
 
 This is a collaborative project that will bring together expertise from both **Lohmueller** and **Ernst’s lab** (UCLA in the Department of Biological Chemistry). 
 
