@@ -95,11 +95,6 @@ Two input files are needed to do genome mapping:
 As you learned during the theoretical lecture, fastaq format is a text format that stores 
 both the biological sequence and its related quality score. To refresh your memory the explanation for the format is found [here](https://en.wikipedia.org/wiki/FASTQ_format)
 
-We first need to index the reference file for later use. This step is
-important for the speed and process of the mapping algorithm. It takes
-around 4 minutes. This creates a collecion of files that are used by BWA
-to perform the alignment.
-
 Create a soft-link of fasta reference to your home folder (type pwd, to know where you are):
 
     ln -s /u/home/m/mica20/QCBioWorkshoptrial/data/Homo_sapiens.GRCh37.75.dna.chromosome.2.fa /home/user_name/
@@ -108,7 +103,11 @@ Then produce the indexes needed for bwa mapper:
 
     bwa index -a bwtsw Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz
     
-It takes some seconds, so we can start discussing about the next steps. 
+We first need to index the reference file for later use. This step is
+important for the speed and process of the mapping algorithm. It takes
+around 4 minutes. This creates a collecion of files that are used by BWA
+to perform the alignment.
+
 Once we have the index file of the reference sequence created then we can align our reads to our reference.
  
 Multilple options our found including:
