@@ -4,15 +4,13 @@ Repository created for the QCBio trial workshps
 # Workshop: part of NGS workshop: read mapping
 # Outline
 Expected outcomes
-1. Today you will learn how to align your sequencing reads to a genome reference
-2. Learn how to use the Integrative genomics viewer (IGV)
-
+1. Today you will learn how to align your sequencing reads to a genome reference using BWA
 
 Read Mapping exercise
 --------------------------------
 
-As we learned during the theorical lecture, high-throughput sequencing technologies have in
-the past few years been producing millions of DNA and RNA sequences reads of human genome and
+High-throughput sequencing technologies have in the past few years been 
+producing millions of DNA and RNA sequences reads of human genome and
 other species. To be useful, this genetic information has to be 'put
 together' in a smart way, in the same way as the pieces of a puzzle
 (reads) need to be mounted according to a picture (reference genome). 
@@ -51,12 +49,18 @@ see, it covers a "bit" of the diversity of human population. If you want
 to go further in details about this project and their findings, you can read of the publications 
 [here](https://www.nature.com/articles/nature18964).
 
+Software
+--------------------------------
+We will be using the software !BWA(https://academic.oup.com/bioinformatics/article/25/14/1754/225615), 
+BWA is standard software package for mapping low-divergent sequences (illumina reads) against a large reference genome––such as the human genome.
+It contains different algorithms BWA, desgined for short reads (<= 100bp) and  BWA-SW and BWA-MEM for longer reads. Because we have high-quality queries (Simons diversity project) we will use BWA-MEM algorithm. This algorithm turns out to be the latest and fastest.
+
 Log in to the server via terminal
 ---------------------------------
 
 ### For windows users
 ```{bash}
-plink -P 8922 [user]@185.45.23.197
+plink [USERNAME]@hoffman2.idre.ucla.edu
 ```
 ### For mac users
 ```{bash}
@@ -64,8 +68,7 @@ ssh [USERNAME]@hoffman2.idre.ucla.edu
 ```
 Data source
 -----------
-
-The data is placed in a folder called **Data** in the same
+The data is placed in a folder (in my directory) called **data** in the same
 directory as users folder. 
 In the following tutorial I am using one individual as an example
 **ERR1019076**, but we could do the same analyses with every Simon's diversity individual.
@@ -90,9 +93,9 @@ Two input files are needed to do genome mapping:
 -   The reads in fastq format.
 
 As you learned during the theoretical lecture, fastaq format is a text format that stores 
-both the biological sequence and its related quality score. 
+both the biological sequence and its related quality score. To refresh your memory the explanation for the format is found ![here](https://en.wikipedia.org/wiki/FASTQ_format)
 
-First we need to index the reference file for later use. This step is
+We first need to index the reference file for later use. This step is
 important for the speed and process of the mapping algorithm. It takes
 around 4 minutes. This creates a collecion of files that are used by BWA
 to perform the alignment.
