@@ -114,7 +114,7 @@ Once we have the index file fro the reference sequence created then we can align
 Multilple options our found including:
 * -t INT        number of threads [1]
 * -k INT        minimum seed length [19]
-* -w INT        band width for banded alignment [100]
+* -w INT        band width for banded alignment [100] (gaps longer than 100 will not be found)
 * -p            Assume the first input query file is interleaved paired-end FASTA/Q
 * -a            output all alignments for SE or unpaired PE
 
@@ -122,16 +122,15 @@ Now you can map the reads back to the reference. This will take around
 10 minutes. You can start installing the software that will be used
 later in this tutorial (IGV) while you wait for it.
 
-    bwa mem -t 16 -p Homo_sapiens.GRCh37.75.dna.chromosome.2 sorted_ERR1019076_reads_135_145.fq | \
-    samtools sort -O BAM -o ERR1019076.bam
+    bwa mem -t 16 -p Homo_sapiens.GRCh37.dna_rm.chromosome.2.fa.gz ERR1019076_reads_135_145.fq > mapped_ERR1019076.sam
 
 Have a look at the bam file generated:
 
-    samtools view ERR1019076.bam | head
+    samtools view mapped_ERR1019076.sam | head
 
 Get some useful stats of your mapping:
 
-    samtools flagstat ERR1019076.bam
+    samtools flagstat mapped_ERR1019076.sam
 
 Once the map is generated, you can index the bam file to visualize it
 using the software IGV. Indexing a genome sorted BAM file allows one to quickly
