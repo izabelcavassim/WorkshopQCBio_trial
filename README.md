@@ -1,3 +1,10 @@
+# Background
+![Background](https://github.com/izabelcavassim/WorkshopQCBio_trial/blob/main/Images/background.png)
+
+
+
+
+
 # WorkshopQCBio_trial
 Repository created for the QCBio trial workshps
 
